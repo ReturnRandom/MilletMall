@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>小米商城</title>
+<!-- 初始化 -->
+<link rel="stylesheet" href="css/reset.css">
+<!-- 清除浮动 -->
+<link rel="stylesheet" href="css/clearfix.css">
+<!-- 链接样式表 -->
+<link rel="stylesheet" href="css/index.css">
+<!-- 导入字体图片库 -->
+<link rel="stylesheet" href="css/iconfont.css">
+<!-- 显示title前面的图标 -->
+<link rel="shoutcut icon" href="images/favicon.ico">
+<!-- 导入jquery库 -->
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>	
+</head>
+<body>
+	<!-- 顶部菜单栏 start-->
+	<div class="topbar">
+		<!-- 居中的内容 -->
+		<div class="container">
+			<!-- 左边的导航 -->
+			<div class="topbar-nav leftFloat clearfix">
+				<a href="#">小米商城</a><span>|</span>
+				<a href="#">MIUI</a><span>|</span>
+				<a href="#">IoT</a><span>|</span>
+				<a href="#">云服务</a><span>|</span>
+				<a href="#">金融</a><span>|</span>
+				<a href="#">有品</a><span>|</span>
+				<a href="#">小爱开放平台</a><span>|</span>
+				<a href="#">企业团购</a><span>|</span>
+				<a href="#">资质证照</a><span>|</span>
+				<a href="#">协议规则</a><span>|</span>
+				<a href="#" class="app">下载app
+					<!-- 后期放置app-download二维码 -->
+				</a>
+				<span>|</span>
+				<a href="#">Select Region</a>
+			</div>
+
+			<!-- 本来购物车是在登录注册的右边的,但是因为都需要右浮动,所以需要先写购物车 -->
+			<!-- 右边的购物车 -->
+			<div class="topbar-cart rightFloat clearfix">
+				<a href=""><i class="iconfont">&#xf0179;</i>购物车(0)</a>
+			</div>
+			<!-- 右边的登录注册 -->
+			<div class="topbar-info rightFloat clearfix">
+				<a href="">登录</a><span>|</span>
+				<a href="">注册</a><span>|</span>
+				<a href="" class="message">消息通知</a>
+			</div>
+		</div>
+	</div>
+	<!-- 顶部菜单栏 end-->
+
+
+
+	<!-- header start-->
+	<div class="header">
+		<div class="container">
+
+			<!-- logo -->
+			<div class="header-logo leftFloat clearfix">
+				<!-- 当网络不好的时候,a标签中没有包裹内容时,则不会显示出来;
+				我们为了在网络差的时候显示"小米官网",网络好的时候不显示"小米官网",
+				我们可以加一个text-indent 属性-->
+				<a href="#" style="text-indent: -9999px;">小米官网</a>
+			</div>
+
+			<!-- 菜单 start-->
+			<div class="header-nav leftFloat clearfix">
+				<ul class="header-nav-list">
+					<li class="nav-item-all clearfix"><a href="#">全部商品分类</a></li>
+					<li class="nav-item"><a href="#">小米手机</a></li>
+					<li class="nav-item"><a href="#">红米</a></li>
+					<li class="nav-item"><a href="#">电视</a></li>
+					<li class="nav-item"><a href="#">笔记本</a></li>
+					<li class="nav-item"><a href="#">家电</a></li>
+					<li class="nav-item"><a href="#">新品</a></li>
+					<li class="nav-item"><a href="#">路由器</a></li>
+					<li class="nav-item"><a href="#">智能硬件</a></li>
+					<li class="nav-item"><a href="#">服务</a></li>
+					<li class="nav-item"><a href="#">社区</a></li>
+				</ul>		
+			</div>
+			<!-- 菜单 end -->
+
+			<!-- header 右边的搜索框 start -->
+			<div class="header-search rightFloat">
+				<form action="" class="search-form">
+					<input type="search" class="search-text">
+					<input type="submit" value="&#xf0179;" class="search-btn iconfont">
+				</form>
+			</div>
+			<!-- header 右边的搜索框 end -->
+
+		</div>
+	</div>
+	<!-- header end-->
+
+
+
+
+	<!-- 中间的整个区域 start   设置背景色-->
+	<div class="seckill">
+		<!-- 小米闪购图片 -->
+		<div class="seckill-head"></div>
+
+		<!-- 菜单以及内容显示   设置居中-->
+		<div class="container">
+			<!-- 菜单 start -->
+			<div id="seckillNav" class="seckill-nav">
+				<ul id="tabs">
+					<li class="seckill-nav-active">
+						<em>20:00</em>
+						<span>
+							<em>即将开始<br />距开始<span id="timer">00:52:00</span></em>
+						</span>
+					</li>
+					<li>
+						<em>00:00</em>
+						<span>明日开始</span>
+					</li>
+					<li>
+						<em>10:00</em>
+						<span>明日开始</span>
+					</li>
+					<li>
+						<em>14:00</em>
+						<span>明日开始</span>
+					</li>
+					<li>
+						<em>20:00</em>
+						<span>明日开始</span>
+					</li>
+				</ul>
+			</div>
+			<!-- 菜单 end -->
+
+			<!-- 商品显示区 start -->
+			<div id="goods-lists" class="seckill-goods">
+				<!-- 第一屏商品 -->
+				<ul class="clearfix seckill-goods-avtive">
+					<!-- 第一屏的第一个商品 -->
+					<li>
+						<div class="bg">
+							<img src="images/seckill-goods-01.jpg" alt="">
+						</div>
+						<div class="info">
+							<a href="" class="info-name">小米MIX 2S 8GB+256GB 陶瓷尊享版 黑色</a>
+							<p class="info-tips">陶瓷机身 手机中的艺术品</p>
+							<p class="info-price">2599.00元<del>3999元</del></p>
+							<a href="" class="info-btn">提醒我</a>
+							<p class="info-person">已有95人设置提醒</p>
+						</div>
+					</li>
+					<li>
+						<div class="bg">
+							<img src="images/seckill-goods-01.jpg" alt="">
+						</div>
+						<div class="info">
+							<a href="" class="info-name">小米MIX 2S 8GB+256GB 陶瓷尊享版 黑色</a>
+							<p class="info-tips">陶瓷机身 手机中的艺术品</p>
+							<p class="info-price">2599.00元<del>3999元</del></p>
+							<a href="" class="info-btn">提醒我</a>
+							<p class="info-person">已有95人设置提醒</p>
+						</div>
+					</li>
+					<li>
+						<div class="bg">
+							<img src="images/seckill-goods-01.jpg" alt="">
+						</div>
+						<div class="info">
+							<a href="" class="info-name">小米MIX 2S 8GB+256GB 陶瓷尊享版 黑色</a>
+							<p class="info-tips">陶瓷机身 手机中的艺术品</p>
+							<p class="info-price">2599.00元<del>3999元</del></p>
+							<a href="" class="info-btn">提醒我</a>
+							<p class="info-person">已有95人设置提醒</p>
+						</div>
+					</li>
+					<li>
+						<div class="bg">
+							<img src="images/seckill-goods-01.jpg" alt="">
+						</div>
+						<div class="info">
+							<a href="" class="info-name">小米MIX 2S 8GB+256GB 陶瓷尊享版 黑色</a>
+							<p class="info-tips">陶瓷机身 手机中的艺术品</p>
+							<p class="info-price">2599.00元<del>3999元</del></p>
+							<a href="" class="info-btn">提醒我</a>
+							<p class="info-person">已有95人设置提醒</p>
+						</div>
+					</li>
+					<li>
+						<div class="bg">
+							<img src="images/seckill-goods-01.jpg" alt="">
+						</div>
+						<div class="info">
+							<a href="" class="info-name">小米MIX 2S 8GB+256GB 陶瓷尊享版 黑色</a>
+							<p class="info-tips">陶瓷机身 手机中的艺术品</p>
+							<p class="info-price">2599.00元<del>3999元</del></p>
+							<a href="" class="info-btn">提醒我</a>
+							<p class="info-person">已有95人设置提醒</p>
+						</div>
+					</li>
+					<li>
+						<div class="bg">
+							<img src="images/seckill-goods-01.jpg" alt="">
+						</div>
+						<div class="info">
+							<a href="" class="info-name">小米MIX 2S 8GB+256GB 陶瓷尊享版 黑色</a>
+							<p class="info-tips">陶瓷机身 手机中的艺术品</p>
+							<p class="info-price">2599.00元<del>3999元</del></p>
+							<a href="" class="info-btn">提醒我</a>
+							<p class="info-person">已有95人设置提醒</p>
+						</div>
+					</li>
+					<li>
+						<div class="bg">
+							<img src="images/seckill-goods-01.jpg" alt="">
+						</div>
+						<div class="info">
+							<a href="" class="info-name">小米MIX 2S 8GB+256GB 陶瓷尊享版 黑色</a>
+							<p class="info-tips">陶瓷机身 手机中的艺术品</p>
+							<p class="info-price">2599.00元<del>3999元</del></p>
+							<a href="" class="info-btn">提醒我</a>
+							<p class="info-person">已有95人设置提醒</p>
+						</div>
+					</li>
+					<li>
+						<div class="bg">
+							<img src="images/seckill-goods-01.jpg" alt="">
+						</div>
+						<div class="info">
+							<a href="" class="info-name">小米MIX 2S 8GB+256GB 陶瓷尊享版 黑色</a>
+							<p class="info-tips">陶瓷机身 手机中的艺术品</p>
+							<p class="info-price">2599.00元<del>3999元</del></p>
+							<a href="" class="info-btn">提醒我</a>
+							<p class="info-person">已有95人设置提醒</p>
+						</div>
+					</li>
+				</ul>
+
+				<ul class="clearfix">
+					<li></li>
+					<li>
+						<div class="bg">
+							<img src="images/seckill-goods-01.jpg" alt="">
+						</div>
+						<div class="info">
+							<a href="" class="info-name">小米MIX 2S 8GB+256GB 陶瓷尊享版 黑色</a>
+							<p class="info-tips">陶瓷机身 手机中的艺术品</p>
+							<p class="info-price">2599.00元<del>3999元</del></p>
+							<a href="" class="info-btn">提醒我</a>
+							<p class="info-person">已有95人设置提醒</p>
+						</div>
+					</li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+
+				<ul class="clearfix">
+					<li>
+						<div class="bg">
+							<img src="images/seckill-goods-01.jpg" alt="">
+						</div>
+						<div class="info">
+							<a href="" class="info-name">小米MIX 2S 8GB+256GB 陶瓷尊享版 黑色</a>
+							<p class="info-tips">陶瓷机身 手机中的艺术品</p>
+							<p class="info-price">2599.00元<del>3999元</del></p>
+							<a href="" class="info-btn">提醒我</a>
+							<p class="info-person">已有95人设置提醒</p>
+						</div>
+					</li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+
+				<ul class="clearfix">
+					<li>
+						<div class="bg">
+							<img src="images/seckill-goods-01.jpg" alt="">
+						</div>
+						<div class="info">
+							<a href="" class="info-name">小米MIX 2S 8GB+256GB 陶瓷尊享版 黑色</a>
+							<p class="info-tips">陶瓷机身 手机中的艺术品</p>
+							<p class="info-price">2599.00元<del>3999元</del></p>
+							<a href="" class="info-btn">提醒我</a>
+							<p class="info-person">已有95人设置提醒</p>
+						</div>
+					</li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+
+				<ul class="clearfix">
+					<li>
+						<div class="bg">
+							<img src="images/seckill-goods-01.jpg" alt="">
+						</div>
+						<div class="info">
+							<a href="" class="info-name">小米MIX 2S 8GB+256GB 陶瓷尊享版 黑色</a>
+							<p class="info-tips">陶瓷机身 手机中的艺术品</p>
+							<p class="info-price">2599.00元<del>3999元</del></p>
+							<a href="" class="info-btn">提醒我</a>
+							<p class="info-person">已有95人设置提醒</p>
+						</div>
+					</li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<!-- 商品显示区 end -->
+
+			<p class="seckill-notice">*小米秒杀活动规则： <br />
+			1.秒杀商品是否参加活动，以订单结算页显示为准，活动包括但不限于优惠券、赠品、满减、满赠等；<br />
+			2.秒杀商品数量有限，活动以下单支付成功为准，请加入购物车后尽快下单支付；<br />
+			3.秒杀价不含运费，最终以订单结算页价格为准。<br />
+			温馨提示：因可能存在系统缓存、页面更新导致价格变动异常等不确定性情况出现，如您发现活动商品标价或促销信息有异常，请您立即联系小米客服，以便我们及时补正。</p>
+		</div>
+	</div>
+	<!-- 中间的整个区域 end-->
+
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
