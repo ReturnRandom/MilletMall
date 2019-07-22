@@ -1,0 +1,175 @@
+/*
+	小米商城
+	中间主题部分: section-main
+ */
+.section-main {
+	margin-top: 3px;
+}
+.section-main .banner-section {
+	position: relative;
+	
+}
+
+/*
+	banner 的图片部分 
+*/
+.section-main .banner-section .banner {
+	height: 460px;
+}
+.banner-section .banner a {
+	/* 隐藏所有的图片 */
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.banner-section .banner img {
+	width: 100%;
+	height: 100%;
+}
+
+/* 
+	banner 的左右切换按钮部分 
+*/
+.banner-section .btn {
+	width: 40px;
+	height: 80px;
+	background: red;
+	position: absolute;
+	left: 234px;
+	top: 50%;
+	margin-top: -40px;
+	transform: rotate(180deg);
+	background: rgba(0, 0, 0, .1) url(../images/index/arrow.png) no-repeat 50% 50%;
+	cursor: pointer;
+}
+.banner-section .btn-right {
+	position: absolute;
+	left: auto;
+	right: 0;
+	transform: rotate(0deg);
+}
+.btn-right:hover,
+.btn-left:hover {
+	background-color: rgba(0, 0, 0, .5);
+}
+
+/* 
+	banner 的小圆点部分
+*/
+.banner-section .slide-btn {
+	width: 100px;
+	height: 25px;
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+	background: rgba(0, 0, 0, .3);
+	border-radius: 10px;
+}
+/* 小圆点 */
+.slide-btn .slide-tab-item {
+	width: 15px;
+	height: 15px;
+	background: rgba(255, 255, 255, .8);
+	border-radius: 50%;
+	float: left;
+	margin: 5px;
+	cursor: pointer;
+}
+/* 激活状态的小圆点 */
+.slide-btn .slide-tab-item:hover,
+.slide-btn .slide-tab-item-active {
+	width: 15px;
+	height: 15px;
+	background: #ff6700;
+}
+
+
+/* 
+	banner 左边的盒子 
+*/
+.section-main .container {
+	position: relative;
+}
+.section-main .menu-content {
+	width: 234px;
+	height: 460px;
+	font-size: 14px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.menu-content .menu-nav {
+	height: 420px;
+	color: #fff;
+	/* 盒子透明程度 */
+	background: rgba(0, 0, 0, .6);
+	padding: 20px 0;
+}
+/* banner 左边的菜单 */
+.menu-nav .menu-list .menu-links {
+	display: block;
+	height: 42px;
+	line-height: 42px;
+	padding-left: 30px;
+	position: relative;
+	color: #fff;
+	text-decoration: none;
+}
+.menu-nav .menu-list:hover .menu-links {
+	background: #ff6700;
+}
+.menu-nav .menu-list i {
+	font-size: 16px;
+	position: absolute;
+	top: 0;
+	right: 20px;
+	color: rgba(255, 255, 255, .5);
+}
+/* 鼠标经过左边菜单时,右边出现的盒子 */
+.menu-list .menu-child {
+	display: none;
+	width: 992px;
+	height: 458px;
+	position: absolute;
+	top: 0;
+	left: 234px;
+	z-index: 10;
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	border-left: 0;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, .18);
+}
+.menu-nav .menu-list:hover .menu-child {
+	display: block;
+}
+
+/* 菜单右边盒子中的商品 */
+.menu-child .child-list {
+	width: 100%;
+	height: 76px;
+	background: blue;
+	margin: 5px 0;
+}
+.child-list li {
+	height: 76px;
+	line-height: 76px;
+	float: left;
+	text-align: center;
+}
+.child-list .link {
+	display: block;
+	height: 40px;
+	padding: 18px 18px;
+}
+
+
+
+
+
+
+
+
+
+
+

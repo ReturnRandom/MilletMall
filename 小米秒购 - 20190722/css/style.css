@@ -1,0 +1,460 @@
+
+/*
+	最上面的 菜单+logo+搜索 通用样式表
+ */
+
+body {
+	font-size: 16px;
+}
+/* 左右浮动,便于重复使用 */
+.leftFloat {
+	float: left;
+}
+.rightFloat {
+	float: right;
+}
+
+/* 顶部菜单栏 */
+.topbar {
+	background: #333333;
+	height: 40px;
+}
+/* 版心 */
+.container {
+	width: 1226px;
+	margin: 0 auto;
+}
+
+.topbar-info,
+.topbar-nav {
+	height: 40px;
+	line-height: 40px;
+	/* font-size: 0; 清除子标签换行带来的空格 */
+	font-size: 0;
+	display: inline-block;
+}
+.topbar a {
+	font-size: 12px;
+	color: #b0b0b0;
+	text-decoration: none;
+	display: inline-block;
+}
+.topbar span {
+	margin: 0.5em;
+	color: #424242;
+	font-size: 12px;
+}
+.topbar-nav a:hover,
+.topbar-info a:hover {
+	color: #fff;
+}
+
+/* 添加下载app的二维码 */
+.topbar-nav .app {
+	position: relative;
+}
+.topbar-nav .app .appBox {
+	display: none;
+	width: 124px;
+	background: #fff;
+	position: absolute;
+	top: 40px;
+	left: -36px;
+	padding: 18px 0 6px;
+	box-shadow: rgb(170, 170, 170) 0 1px 5px;
+	z-index: 25;
+}
+.topbar-nav .app .appBox:before {
+	content: '';
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+	border-bottom: 10px solid #fff;
+	position: absolute;
+	top: -20px;
+	left: 52px;
+}
+.topbar-nav .app .appBox img {
+	display: block;
+	width: 90px;
+	height: 90px;
+	margin: 0 auto;
+}
+.topbar-nav .app .appBox span {
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	line-height: 1;
+	margin-top: 14px;
+}
+.topbar-nav .app:hover .appBox {
+	display: block;
+}
+/* 购物车 */
+.topbar-cart {
+	position: relative;
+}
+/* 购物车的样式 */
+.topbar-cart a {
+	height: 40px;
+	line-height: 40px;
+	display: block;
+	width: 120px;
+	background: #424242;
+	text-align: center;
+	margin-left: 15px;
+	/* 下面两行代码是为了盖住下面盒子的阴影 */
+	position: relative;
+	z-index: 3;
+}
+/* 鼠标放在购物车上的时候,购物车的样式 */
+.topbar-cart .activeBuyCar {
+	display: block;
+	background: #fff;
+	color: #ff6700;
+}
+/* 购物车下面的盒子,鼠标移动在购物车上的时候显示出来 */
+.activeBuyBox {
+	display: none;
+	width: 330px;
+	height: 100px;
+	line-height: 100px;
+	background: #fff;
+	text-align: center;
+	font-size: 14px;
+	position: absolute;
+	top: 40px;
+	left: -195px;
+	z-index: 2;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+}
+
+
+/* 购物车左边的图标 */
+.topbar-cart i {
+	font-size: 20px;
+	text-align: center;
+	padding-right: 4px;
+	vertical-align: -4px;
+}
+/* 登录注册 */
+.topbar-info .message {
+	/*padding: 0 10px;
+	*/
+	padding-right: 10px;
+}
+
+/* header */
+.header {
+	height: 100px;
+}
+
+/* header 左边的logo */
+.header-logo {
+	margin-top: 22px;
+}
+/*当网络不好的时候,a标签中没有包裹内容时,则a标签内部的所有内容都不会显示出来;
+我们为了在网络差的时候显示"小米官网",网络好的时候不显示"小米官网",显示其他内容的时候
+我们可以加一个text-indent 属性*/
+.indent-logo {
+	text-indent: -9999px;
+	text-align: left;
+	overflow: hidden;
+}
+.header-logo a {
+	display: block;
+	width: 49px;
+	height: 49px;
+	padding: 3px;
+	background: #ff6700 url(../images/mi-Lo.png) no-repeat -46px 3px;
+	transition: all .2s;
+}
+/* 鼠标放在logo上时,logo右移动 */
+.header-logo a:hover {
+	background: #ff6700 url(../images/mi-Lo.png) no-repeat 3px 3px;
+}
+
+/* header 中间的菜单栏 */
+.header-nav {
+	width: 850px;
+	height: 100px;
+}
+.header-nav .header-nav-list {
+	width: 820px;
+	height: 88px;
+	padding: 15px 0 0 20px;
+}
+.header-nav-list .nav-item-all,
+.header-nav-list .nav-item {
+	float: left;
+	/*position: relative;*/
+}
+/* 鼠标移入所有商品分类时出现的盒子 */
+/*.nav-item-all .product-classify {
+	width: 234px;
+	height: 460px;
+	font-size: 14px;
+	background: blue;
+	position: absolute;
+	top: 88px;
+	left: -84px;
+	z-index: 20;
+}*/
+
+.nav-item-all a,
+.nav-item a {
+	display: block;
+	color: #333;
+	text-decoration: none;
+	padding: 26px 10px 38px;
+}
+/* 全部商品分类 */
+.nav-item-all a {
+	text-align: right;
+	width: 127px;
+}
+.nav-item a:hover {
+	color: #ff6700;
+}
+
+/* header 右边的搜索框 */
+.header-search {
+	width: 296px;
+	height: 50px;
+	margin-top: 25px;
+}
+/* 搜索框中的表单样式 */
+.header-search .search-form {
+	display: block;
+	width: 296px;
+	height: 50px;
+	/* 开启定位，方便后面将search-text与search-btn定位 */
+	position: relative;
+}
+/* 搜索框中的文本框 */
+.header-search .search-text {
+	display: block;
+	width: 245px;
+	height: 50px;
+	line-height: 50px;
+	border: 1px solid #e0e0e0;
+	/* 去掉边框高亮 */
+	outline: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-indent: 15px;
+	transition: all .3s linear;
+}
+/* 搜索框中的提交按钮 */
+.header-search .search-btn {
+	display: block;
+	width: 52px;
+	height: 50px;
+	border: 1px solid #e0e0e0;
+	/* 去掉边框高亮 */
+	outline: 0;
+	/* 这里是为了设置后面放置的字体图片 */
+	font-size: 24px;
+	line-height: 24px;
+	background: #fff;
+	color: #616161;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transition: all .3s linear;
+}
+
+.header-search .search-btn:hover {
+	background-color: #ff6700;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/* 
+	最下面的 口号+帮助中心+版权 通用样式 
+*/
+
+/* 版权部分 口号 */
+.aboutUs {
+	width: 100%;
+	background: #fff;
+}
+.aboutNav {
+	padding: 27px 0;
+	border-bottom: 1px solid #e0e0e0;
+}
+.aboutNav a {
+	float: left;
+	width: 19%;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	color: #616161;
+	font-size: 16px;
+	text-decoration: none;
+	transition: all .3s;
+}
+.aboutNav a:hover {
+	color: #ff6700;
+}
+.aboutNav span {
+	float: left;
+	width: 1px;
+	height: 25px;
+	line-height: 25px;
+	background: #e0e0e0;
+}
+/* 字体图标的样式 */
+.aboutNav i {
+	font-size: 30px;
+	padding: 0 8px;
+	text-align: center;
+	vertical-align: -4px;
+}
+/* 帮助中心 */
+.help {
+	padding: 40px 0;
+	/*background: skyblue;*/
+}
+.help-center {
+	float: left;
+	border-right: 1px solid #e0e0e0;
+}
+.help-center dl {
+	width: 160px;
+	float: left;
+}
+.help-center dl dt {
+	margin: 0 0 26px;
+	font-size: 14px;
+	color: #424242;
+}
+.help-center dl dd {
+	margin: 10px 0 0;
+	font-size: 12px;
+}
+.help-center dl dd a {
+	color: #757575;
+	text-decoration: none;
+}
+.help-center dl dd a:hover {
+	color: #ff6700;
+}
+
+/* 帮助中心右边的电话 */
+.help-phone {
+	float: right;
+	width: 251px;
+	height: 96px;
+	text-align: center;
+	color: #616161;
+}
+.help-phone .phone {
+	margin: 0 0 5px;
+	font-size: 22px;
+	line-height: 1;
+	color: #ff6700;
+}
+.help-phone p {
+	margin: 0 0 16px;
+	line-height: 1;
+	font-size: 12px;
+}
+.help-phone .btn {
+	display: inline-block;
+	width: 118px;
+	height: 28px;
+	font-size: 12px;
+	line-height: 28px;
+	background: #fff;
+	color: #ff6700;
+	border: 1px solid #ff6700;
+	text-decoration: none;
+	transition: all .4s;
+}
+.help-phone .btn:hover {
+	color: #fff;
+	background: #f25807;
+}
+
+/* 版权信息 */
+.copyright {
+	background: #f5f5f5;
+	padding: 30px 0;
+	font-size: 12px;
+}
+.copyright .container {
+	position: relative;
+}
+/* 左边的logo */
+.copyright .container .info-logo {
+	width: 57px;
+	height: 57px;
+	margin-right: 10px;
+	font-size: 12px;
+	background: #f25807 url(../images/mi-logo.png) no-repeat center center;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+/* 右边的文字 */
+.copyright .info-text {
+	margin-left: 67px;
+	color: #b0b0b0;
+}
+.copyright .info-text p {
+	line-height: 18px;
+	margin: 0;
+}
+.copyright .info-text p:first-child {
+	/* 为了清除子标签代码换行带来的空格 */
+	font-size: 0;
+}
+.copyright .info-text a {
+	font-size: 12px;
+	text-decoration: none;
+	color: #757575;
+}
+.copyright .info-text span {
+	font-size: 12px;
+	margin: 0 0.25em;
+}
+.info-text p:last-child a {
+	color: #b0b0b0;
+}
+.info-text p:last-child a:hover {
+	color: #ff6700;
+}
+
+/* 最下面的一排图片 */
+.copyright .info-links {
+	height: 28px;
+	margin: 5px 0 0;
+	margin-left: 67px;
+}
+.copyright .info-links img {
+	height: 28px;
+	width: auto;
+	margin-left: 0;
+	margin-bottom: 15px;
+}
+
+.copyright .slogan {
+	margin: 30px auto 0;
+	width: 267px;
+	height: 19px;
+	background: url(../images/slogan2016.png) no-repeat center 0;
+}
+
